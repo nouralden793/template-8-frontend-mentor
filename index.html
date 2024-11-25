@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries</title>
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-[#fafafa]">
+    <div class="project">
+      <header
+        class="header z-50 fixed top-0 left-0 w-full bg-white shadow-grayShadow"
+      >
+        <div
+          class="container flex items-center justify-between pb-3 flex-col sm:flex-row sm:pb-0"
+        >
+          <h1 class="text-2xl my-2 font-bold capitalize">
+            Where in the world?
+          </h1>
+          <div class="mode text-lg cursor-pointer">
+            <i class="fa-regular fa-moon"></i>
+            <span class="dark-mode">Dark Mode</span>
+          </div>
+        </div>
+      </header>
+      <div class="search-filter mb-[30px] mt-[130px] sm:mt-[100px]">
+        <div
+          class="container flex justify-between flex-col gap-5 sm:items-center sm:flex-row sm:gap-0"
+        >
+          <div
+            class="search-input bg-white p-3 rounded-md shadow-grayShadow sm:min-w-[300px]"
+          >
+            <i class="fa-solid fa-magnifying-glass text-gray-400 mr-3"></i>
+            <input type="text" placeholder="Search for a country..." />
+          </div>
+          <div class="filter-place relative">
+            <div class="filter-head">
+              Filter By Region <i class="fa-solid fa-chevron-down ml-4"></i>
+            </div>
+            <div
+              class="options z-50 transition-all duration-300 scale-y-0 origin-top absolute bg-white p-3 rounded-md w-full shadow-grayShadow -bottom-[265px]"
+            >
+              <p data-region=".all">All</p>
+              <p data-region=".africa">Africa</p>
+              <p data-region=".americas">Americas</p>
+              <p data-region=".asia">Asia</p>
+              <p data-region=".europe">Europe</p>
+              <p data-region=".oceania">Oceania</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content mb-[30px]">
+        <div class="container grid grid-cols-special gap-11"></div>
+      </div>
+      <div
+        class="flag-detal hidden absolute top-0 pt-[160px] sm:top-[35px] left-0 bg-[#fafafa] h-full w-full"
+      >
+        <div class="container w-full h-full">
+          <div
+            class="back z-10 cursor-pointer bg-white transition-all duration-300 top-[10%] sm:top-0 shadow-grayShadow py-2 px-3 rounded-md w-fit my-[50px] absolute left-[10%] hover:scale-[1.05]"
+          >
+            <i class="fa-solid fa-arrow-left mr-3"></i> Back
+          </div>
+          <div class="flag-content">
+            <div class="flag"></div>
+            <div class="cont">
+              <div class="head"></div>
+              <div class="flag-details"></div>
+              <div class="border-count">
+                <div>Border Countries:</div>
+                <div class="countries"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
